@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="" >
+    <meta name="keywords" content="cavalls, equitació, Mallorca" >
+    <meta
+      name="description"
+      content="La mejor escuela de equitación de Mallorca”"
+    >
+    <title>web julia</title>
+    <style>
+      body {
+        background-color: green;
+      }
+      .contenedoramarillo {
+        background-color: yellow;
+        width: 800px;
+        height: 760px;
+        padding-top: 1px;
+        margin: 10px;
+      }
+      .contenedorgris {
+        margin-top: 4%;
+        background-color: rgb(132, 135, 132);
+        height: 150px;
+        padding-bottom: 18px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      h1 {
+        margin-bottom: -70px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        text-decoration: underline;
+        font-size: 50px;
+        float: right;
+        margin-right: 250px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+      img {
+        width: 150px;
+        margin-top: 10px;
+      }
+      .blue {
+        background-color: blue;
+        margin-top: 4%;
+        margin: 0px;
+        height: 280px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 3px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      #red{
+        padding: 20px;
+        margin-left: 300px;
+      }
+      .img2 {
+        border: 5px solid rgb(255, 7, 7);
+        width: 30%;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 350px;
+      }
+      .parrafos1 {
+        margin-top: 20px;
+        border: dotted 1px green;
+        float: left;
+        width: 385px;
+        margin-left: 12px;
+        margin-right: -12px;
+        font-size: 14px;
+      }
+
+      .parrafos3 {
+        padding-left: 10px;
+        margin-top: 110px;
+        border: dotted 1px green;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+      }
+      .piepagina {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 24px;
+        margin-top: 7px;
+        margin-right: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+      }
+     a:hover{
+        background: blue;
+     }
+    </style>
+  </head>
+  <body>
+    <div class="contenedoramarillo">
+      <div class="contenedorgris">
+        <h1>EQUESTRE S.A</h1>
+        <img src="logo.png" alt="imagen1" >
+      </div>
+      <h2>
+        <a href="https://lestanques.com/club-hipic/escola-equitacio/ "
+          >La millor escola de cavalls</a
+        >
+      </h2>
+      <div class="blue">
+        <button id="red"
+        onclick="changeColor('red')"
+        onmouseover="colorboton(this,'red')"
+        onmouseout="colorboton(this,'')"
+        >Rojo</button>
+      </div>
+      <div class="parrafos1">
+        <p>
+            <input id="num1" type="text"> 
+            <button id="sum-button" onclick="sumar()">+</button>
+            <input id="num2" type="text">
+            
+            <span id="result"></span>
+        </p>
+      </div>
+      <div class="parrafos1">
+        <p>
+          Escuela de Equitacion Escuela de Equitacion Escuela de Equitacion
+          Escuela de Equitacion Escuela de Equitacion Escuela de Equitacion
+          Escuela de Equitacion
+        </p>
+      </div>
+      <div class="parrafos3">
+        <p>
+          Escuela de Equitacion Escuela de Equitacion Escuela de Equitacion
+          Escuela de Equitacion Escuela de Equitacion Escuela de Equitacion
+          Escuela de Equitacion
+        </p>
+      </div>
+
+      <div class="piepagina">
+        <footer>2022-CIFP</footer>
+      </div>
+    </div>
+  </body>
+  <script>
+     function sumar() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var result = num1 + num2;
+        document.getElementById("result").innerHTML = result;
+    }; 
+    var contenedor = document.getElementById("contenedor");
+      function cambionegro (color){
+        contenedor.style.background =color;
+      }
+      function colorboton(boton,color){
+        boton.style.color=color;
+        boton.style.borderColor=color;
+      }
+    function changeColor(color) {
+        contenedor.style.color = color;
+    }
+  </script>
+</html>
+
+  <!--<div class="blue">
+    <img class="img2" alt="es google" src="jinete1.jpg" >
+    <img class="img2" alt="es google" src="jinete1.jpg" >
+  </div> insertar imagenes dentro de un div modificando el nombre de la clase-->
