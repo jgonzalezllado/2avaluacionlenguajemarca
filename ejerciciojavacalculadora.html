@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <input id="num1" type="text"> 
+    <button id="sum-button" onclick="sumar()">+</button>
+    <input id="num2" type="text">
+    
+    <span id="result"></span>
+</body>
+<script>
+      function sumar() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var result = num1 + num2;
+        document.getElementById("result").innerHTML = result;
+    }; 
+</script>
+</html>
