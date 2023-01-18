@@ -16,17 +16,31 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, facere cupiditate quia officia, temporibus fugiat, id in laborum deleniti quae autem aliquid dolorem sed sapiente exercitationem tenetur! Harum, autem at.
     </div>
     <button id="red"
-     onclick="changeColor('red')">Rojo</button>
-     <button id="green"
-     onclick="changeColor('green')">Verde</button>
-     <button id="blue"
-     onclick="changeColor('blue')">Azul</button>
+     onclick="changeColor('red')"
+     onmouseover="colorboton(this,'red')"
+     onmouseout="colorboton(this,'')"
+     >Rojo</button>
+     <button id="red"
+     onclick="changeColor('green')"
+     onmouseover="colorboton(this,'green')"
+     onmouseout="colorboton(this,'')"
+     >Verde</button>
+     <button id="red"
+     onclick="changeColor('blue')"
+     onmouseover="colorboton(this,'blue')"
+     onmouseout="colorboton(this,'')"
+     >Azul</button>
+    
 
 </body>
 <script>
       var contenedor = document.getElementById("contenedor");
       function cambionegro (color){
         contenedor.style.background =color;
+      }
+      function colorboton(boton,color){
+        boton.style.color=color;
+        boton.style.borderColor=color;
       }
     function changeColor(color) {
         contenedor.style.color = color;
