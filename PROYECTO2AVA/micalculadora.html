@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .calculadora{
+
+            position: absolute;
+            background-color: rgb(232, 235, 4);
+            border-radius: 20px;
+            padding: 200px;
+            margin-left: 200px;
+            width: 20px;
+            height: 90px;
+        
+             
+        }
+        .off{
+           position: absolute;
+            border: solid 2px rgb(228, 255, 204);
+            display: none;
+            background-color: rgb(70, 74, 72);
+            padding: 100px;
+            left:25px;
+            top:10px;
+            width: 100px;
+        }
+
+        .input1{
+            position: relative;
+            top:-90px;
+            right:60px;
+           
+        }
+        #result{
+            position: relative;
+            font-size: 30px;
+            padding: 3px;
+            text-align: left;
+            left:12px;
+            border-radius: 20px;
+           
+
+        }
+        .pantalla{
+            position: absolute;
+            border: solid 2px;
+            border-radius: 10px;
+            background-color: rgb(0, 0, 0);
+            padding-left:250px;
+            padding-bottom: 25px;
+         
+            left:40px;
+            top:40px;
+            width: 100px;
+        }
+        .secpantalla{
+            position: relative;
+            border: solid 2px rgb(228, 255, 204);
+            
+            background-color: rgb(4, 78, 30);
+            padding: 100px;
+            left:-225px;
+            top:10px;
+            width: 100px;
+            
+        }
+        .input2{
+            position: relative;
+            top:-70px;
+            right:60px;
+        }
+        
+        .suma{
+            position: relative;
+            top:-50px;
+            left:100px;
+       
+        }
+       
+        
+
+        .resultado{
+            position: relative;
+            top:-50px;
+            right:1px;
+            
+
+        }
+
+        .resta{
+            position:relative;
+            top: -50px;
+            left:50px;
+        }
+        #restar{
+            border-radius: 20px;
+            background-color: black;
+            color:aqua;
+            font-size: 30px;
+            position: relative;
+            width: 40px;
+            height:40px;
+            
+        }
+
+        #suma{
+            border-radius: 20px;
+            background-color: black;
+            color:aqua;
+            font-size: 30px;
+            position: relative;
+            width: 40px;
+            height:40px;
+
+        }
+        #mult{
+            background-color: black;
+            color:aqua;
+            font-size: 30px;
+            position: relative;
+            border-radius: 20px;
+            width: 40px;
+            height:40px;
+            left:100px;
+            top:-50px;
+            
+        }
+        #restart{
+            background-color: rgb(63, 1, 102);
+            position: relative;
+            height: 20px;
+            border-radius: 20px;
+            width: 45px;
+            right:100px;
+            top:-50px;
+        }
+        .botones{
+            position: absolute;
+            top:350px;
+            right:150px;
+        }
+        .oculto {
+        display: none;
+        }
+        
+        #KO{
+            background-color: rgb(125, 0, 0);
+            position: absolute;
+            border-radius: 20px;
+            width: 1px;
+            height: 50px;
+            right:-165px;
+            top:-310px;
+        }
+        .instrucciones{
+            background-color: red;
+            
+            left:200px;
+        }
+h1{
+    background-color: red;
+    border-radius: 40px;
+    width: 400px;
+    
+}
+p {
+    text-align: center;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+   
+
+        <center><h1>Instrucciones calculadora</h1></center>
+       <left> <p>Puedes multiplicar, restar y sumar. Si presionas el botón lila se restablece la pantalla, botón rojo se apaga.</p></left>
+
+    <div class ="calculadora">
+    <div class="conjuntopantalla"></div>
+    <div class="pantalla">
+    <div class="secpantalla"></div>
+    <div class="off"></div>
+    </div>
+    <div class="input1">
+    <input id = "num1" type ="text">
+    </div>
+    <div class="botones">
+    <div class="apaga">
+    <button id="KO" onclick="mostrarOcultar()"></button>
+
+    </div>
+    <div class="restart">
+    <button id="restart" onclick="restart()"></button>   
+    </div>
+    <div class="suma">
+    <button id ="suma" onclick="sumar()">+</button>
+    </div>
+    <div class="resta">
+    <button id ="restar" onclick="restar()">-</button>
+    </div>
+    <button id ="mult" onclick="multiplicar()">*</button>
+    </div>
+    <div class="input2">
+    <input id ="num2" type ="text"></div>
+    <div class="resultado">
+    <span id ="result">4</span>
+    </div>
+    </div>
+</body>
+<script>
+
+function mostrarOcultar() {
+  var divOff = document.querySelector(".off");
+  var input = document.getElementById("num1");
+  var input2 = document.getElementById("num2");
+  var result = document.getElementById("result");
+  divOff.style.display = divOff.style.display === "block" ? "none" : "block";
+  input.style.display = input.style.display === "none" ? "block" : "none";
+  input2.style.display = input2.style.display === "none" ? "block" : "none";
+  result.style.display = result.style.display === "none" ? "block" : "none";
+ 
+ 
+}
+
+
+
+function restart() {
+
+document.getElementById("result").innerHTML= "";
+document.getElementById("num1").value="";
+document.getElementById("num2").value="";
+
+
+}    
+
+function multiplicar() {
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    var result = num1 * num2;
+    document.getElementById("result").innerHTML = result;
+}
+
+function sumar() {
+
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    var result = num1 + num2;
+    document.getElementById("result").innerHTML = result;
+};
+
+function restar() {
+
+    var num1 =parseFloat(document.getElementById("num1").value);
+    var num2 =parseFloat(document.getElementById("num2").value);
+    var result = num1 - num2;
+    document.getElementById("result").innerHTML = result;
+
+}
+
+</script>
+</html>
+
