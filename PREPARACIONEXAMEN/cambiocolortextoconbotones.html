@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio</title>
+	<meta charset="UTF-8">
+	<style>
+		.botons {
+			color: black;
+			background-color: white;
+			border: 2px solid black;
+			font-size: 16px;
+			padding: 5px 10px;
+			margin-right: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<span id="texto" onmouseover="this.style.backgroundColor='black'" onmouseout="this.style.backgroundColor='white'; this.style.color='black'">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at mauris sit amet dolor semper molestie ac ac tellus.</span>
+		<button id="botonRojo" class="botons" onclick="cambiarColor('red')" onmouseover=" this.style.color='red'; this.style.border='2px solid red';" onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.border='2px solid black';">Rojo</button>
+		<button id="botonVerde" class="botons" onclick="cambiarColor('green')" onmouseover=" this.style.color='green'; this.style.border='2px solid green';" onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.border='2px solid black';">Verde</button>
+		<button id="botonAzul" class="botons" onclick="cambiarColor('blue')" onmouseover=" this.style.border='2px solid blue';" onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.border='2px solid black';">Azul</button>
+	</div>
+
+	<script>
+		function cambiarColor(color) {
+			document.getElementById("texto").style.color = color;
+		}
+	</script>
+</body>
+</html>

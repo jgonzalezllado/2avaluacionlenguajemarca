@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercici 3</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<input type="number" id="oferta">
+	<button onclick="ofertar()">Ofertar</button>
+	<script>
+		function ofertar() {
+			const oferta = document.getElementById("oferta").value;
+			if (oferta < 1000) {
+				console.log("Oferta insuficiente");
+			} else if (oferta === "1000") {
+				console.log("Ha ofertado el valor mínimo");
+			} else {
+				console.log("!Oferta aceptada!");
+			}
+		}
+	</script>
+</body>
+</html>
