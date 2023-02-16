@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercici 1</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<input type="text" id="contrasenya">
+	<button onclick="comprovar()">Comprovar</button>
+	<script>
+		function comprovar() {
+			const contrasenya = document.getElementById("contrasenya").value;
+			if (contrasenya === "dual123") {
+				console.log("Contrasenya correcta");
+			} else {
+				console.log("Contrasenya incorrecta");
+			}
+		}
+	</script>
+</body>
+</html>
