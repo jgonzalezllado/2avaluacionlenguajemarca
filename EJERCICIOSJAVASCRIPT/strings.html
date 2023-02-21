@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+    <label id="prueba"></label><input type="text" id="hey" /><br />
+    <button onclick="comproba()">Validar</button>
+    <div id="mensaje" style="background-color: rgb(69, 59, 47)"></div>
+</body>
+<script>
+
+function comproba() {
+var palabra = document.getElementById('hey').value;
+
+ if (palabra.length <= 10) {
+        document.getElementById('mensaje').innerHTML = 'Escrigui la paraula una altra vegada'
+      } else {
+        document.getElementById('mensaje').innerHTML = ''
+      }
+
+}
+
+
+</script>
+</html>
